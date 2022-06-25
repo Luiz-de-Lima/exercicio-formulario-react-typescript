@@ -1,17 +1,18 @@
 import { useState } from "react";
 
+type InputChangeElement = React.ChangeEvent<HTMLInputElement>;
 const App = () => {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [idade, setIdade] = useState(0);
 
-  const getNome = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const getNome = (event: InputChangeElement) => {
     setNome(event.target.value);
   };
-  const getSobreNome = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const getSobreNome = (event: InputChangeElement) => {
     setSobrenome(event.target.value);
   };
-  const getIdade = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const getIdade = (event: InputChangeElement) => {
     setIdade(parseInt(event.target.value));
   };
 
